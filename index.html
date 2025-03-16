@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación 444</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <!-- Espacio para imagen de logo -->
+        <img src="logo.png" alt="Logo" class="logo">
+    </header>
+
+    <!-- Secciones con imagen de background -->
+    <section class="background-section-1 section-1">
+        <!-- Contenido opcional -->
+    </section>
+
+    <section class="background-section-2 section-2">
+        <div class="video-container-2">
+            <video controls autoplay id="myVideo2">
+                <source src="Media/LÍNEAS ANCESTRALES.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+         <div class="who-container">
+            En Fundación 444 unimos saberes ancestrales con metodologías innovadoras <br>
+            para crear espacios de aprendizaje, diálogo y sanación.
+         </div>
+         <div class="image-container">
+            <img src="bg1.jpeg" alt="foto" class="image-center">
+         </div>
+         <div class="how-container">
+            ✔️ Aprende a gestionar conflictos de manera pacífica<br>
+            ✔️ Encuentra equilibrio entre cuerpo, mente y espíritu<br>
+            ✔️ Conéctate con prácticas ancestrales para el crecimiento personal<br>
+
+            <button style="margin: 20px;">
+                botón grandeee
+            </button>
+
+         </div>
+         <div class="video-container">
+            <video controls autoplay id="myVideo1">
+                <source src="Media/LAS CUATRO RAZAS 🖐🏿 Leyenda de la Tribu Cree.mp4" type="video/mp4">
+                https://www.youtube.com/watch?v=k6xB9sTcIqk
+            </video>
+         </div>
+         <div class="testimonial-container" >
+
+         </div>
+         <div class="contact-container">
+            <!-- Contenido del sitio -->
+        </div>
+        <div class="community-container">
+
+         </div>
+         <div class="event-container">
+            En Fundación 444 unimos saberes ancestrales con metodologías innovadoras <br>
+            para crear espacios de aprendizaje, diálogo y sanación.
+         </div>
+         <div class="image-container-2">
+            <img src="bg1.jpeg" alt="foto" class="image-center">
+         </div>
+         <div class="blog-container">
+            ✔️ Aprende a gestionar conflictos de manera pacífica<br>
+            ✔️ Encuentra equilibrio entre cuerpo, mente y espíritu<br>
+            ✔️ Conéctate con prácticas ancestrales para el crecimiento personal<br>
+
+            <button style="margin: 20px;">
+                asfpiohdvond
+            </button>
+
+         </div>
+         
+    </section>
+
+    <footer class="contact-footer">
+        <div class="left-column">
+            <h2>UBICACIÓN</h2>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15906.599789074957!2d-74.0606467!3d4.6563611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b686e4ffa33%3A0xd387f0cc64e60de9!2sFundaci%C3%B3n%20444!5e0!3m2!1ses-419!2sco!4v1742090463048!5m2!1ses-419!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="contact-form">
+                <h2>FORMULARIO DE CONTACTO</h2>
+                <form>
+                    <input type="text" name="name" placeholder="INGRESE SU NOMBRE" required>
+                    <input type="email" name="email" placeholder="INGRESE UN CORREO ELECTRÓNICO VÁLIDO" required>
+                    <textarea name="message" placeholder="INGRESE SU MENSAJE" rows="5" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="social-section">
+                <h2>SÍGUENOS</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/fundacion444"><img src="./Media/facebook.png" alt="FACEBOOK"></a>
+                    <a href="https://www.instagram.com/fundacion_444/?hl=es"><img src="./Media/instagram.png" alt="INSTAGRAM"></a>
+                    <a href="https://www.youtube.com/channel/UCZz8SFJ1RwVdHIn3t8bVQBg"><img src="./Media/youtube.png" alt="YOUTUBE"></a>
+                    <a href="https://www.linkedin.com/company/fundaci%C3%B3n-444/"><img src="./Media/linkedin.png" alt="LINKEDIN"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer">
+        <p>&copy; 2023 Política de privacidad</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video1 = document.getElementById('myVideo1');
+            var video2 = document.getElementById('myVideo2');
+
+            function checkScroll(video, offset = 0) {
+                var rect = video.getBoundingClientRect();
+                var isVisible = (rect.top >= -offset && rect.bottom <= window.innerHeight + offset);
+                if (isVisible) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+
+            function checkScrollForAllVideos() {
+                checkScroll(video1, 0); // Sin offset para myVideo1
+                checkScroll(video2, window.innerHeight * 0.2); // Aumenta el alcance de reproducción del video2 en un 20%
+            }
+
+            window.addEventListener('scroll', checkScrollForAllVideos);
+            window.addEventListener('resize', checkScrollForAllVideos);
+            checkScrollForAllVideos(); // Verificar inicialmente si los videos están en la vista
+        });
+    </script>
+</body>
+</html>

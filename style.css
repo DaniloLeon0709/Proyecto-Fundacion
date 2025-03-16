@@ -1,0 +1,299 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+/* Estilos para el header del sitio */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 33px;
+    background-color: #e8d3d3;
+}
+
+/* Estilos para la imagen del logo */
+.site-header .logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Estilos para las secciones con background image */
+.background-section-1 {
+    height: 91vh; /* Altura de la sección */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aqua;
+    overflow: auto;
+}
+
+.background-section-2 {
+    height: 360vh;/* Altura de la sección */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns:  repeat(12,1fr);
+    grid-template-rows: 27% 18% 18% 18% 18%;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.video-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+}
+
+.who-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    grid-column: 1 / 5;
+    grid-row: 2 / 2;
+    /* margin: 5px; */
+}
+
+.how-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    grid-column:  9 / 13;
+    grid-row: 2 / 2;
+    /* margin: 5px; */
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    grid-column: 5 / 9;
+    grid-row: 2 / 2;
+    /* margin: 5px; */
+}
+.image-container .image-center {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    grid-column: 1 / 8;
+    grid-row: 3/ 3;
+    overflow: hidden;
+    /* margin: 5px; */
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(91, 40, 40, 0.5);
+    color: white;
+    grid-column:  8 / 13;
+    grid-row: 3 / 3;
+    /* margin: 5px; */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(79, 91, 40, 0.5);
+    color: white;
+    /* margin: 5px; */
+    grid-column:  1 / 7;
+    grid-row: 4 / 4;
+}
+
+.community-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(219, 103, 103, 0.5);
+    color: white;
+    /* margin: 5px; */
+    grid-column:  7 / 13;
+    grid-row: 4 / 4;
+}
+
+.event-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(155, 130, 223, 0.5);
+    color: white;
+    grid-column: 1 / 5;
+    grid-row: 5 / 5;
+    /* margin: 5px; */
+}
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(36, 111, 192, 0.5);
+    color: white;
+    grid-column:  9 / 13;
+    grid-row: 5 / 5;
+    /* margin: 5px; */
+}
+
+.image-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(24, 61, 130, 0.5);
+    color: white;
+    grid-column: 5 / 9;
+    grid-row: 5 / 5;
+    /* margin: 5px; */
+}
+
+.image-container-2 .image-center {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para que cubra todo el contenedor */
+}
+
+.video-container-2 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para que cubra todo el contenedor */
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+}
+.left-column {
+    width: 48%;
+}
+.map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.right-column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #555;
+}
+.social-section {
+    text-align: center;
+}
+.social-section h2 {
+    margin-bottom: 10px;
+}
+.social-icons {
+    margin: 10px 0;
+}
+.social-icons a img {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+.footer {
+    width: 99.3%;
+    background-color: white;
+    padding: 10px 5px;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+.footer p {
+    margin: 5px 0;
+}
+ /* Imagen de fondo para la primera sección 
+.section-1 {
+    background-image: url('bg1.jpeg'); 
+}
+
+ Imagen de fondo para la segunda sección 
+.section-2 {
+    background-image: url('bg2.jpeg'); 
+} */
+

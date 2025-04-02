@@ -1,7 +1,6 @@
 /* General: Asegura que todos los elementos respeten el tamaño del contenedor */
 * {
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -14,65 +13,126 @@ body{
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     color: #FCBE0B;
     text-align: center;
     text-shadow: 0px 0px 4px #202E39;
     margin: 10px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 section {
     padding: 0px 5px;
 }
 
-/* Estilos para el header del sitio */
-.site-header {
-    display: flex;
-    align-items: center;
-    padding: 33px;
-    /* background-color: rgba(252, 192, 11, 0.776); */
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 0px 0px 4px #202E39;
+    margin: 10px;
+    font-weight: 200;
+}
+a {
+    text-transform: uppercase;
+    color: #FCBE0B;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Estilos para la imagen del logo */
+/* Estilos para el header del sitio */
+.site-header {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos del header */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 0 20px; /* Espaciado interno del header */
+    background-color: #202E39; /* Fondo azul oscuro */
+    height: 80px; /* Altura fija del header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
 .site-header .logo {
-    max-height: 50px;
+    max-height: 60px; /* Tamaño máximo del logo */
     width: auto;
 }
 
+.site-header .navbar {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos del navbar */
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin-left: 20px; /* Espaciado entre el logo y el navbar */
+}
+
+.site-header .navbar ul {
+    display: flex;
+    justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+    align-items: center;
+    list-style: none; /* Elimina los puntos de la lista */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    padding: 0;
+    margin: 0;
+}
+
+.site-header .navbar ul li {
+    flex: 1; /* Cada elemento ocupa el mismo espacio */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+}
+
+.site-header .navbar ul li a {
+    text-decoration: none; /* Elimina la línea del texto */
+    color: #FCBE0B; /* Color amarillo */
+    font-size: 1.2em; /* Tamaño del texto */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.site-header .navbar ul li a:hover {
+    color: #FFFFFF; /* Cambia el color al pasar el cursor */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+.site-header span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #FCBE0B;
+    text-shadow: 0px 0px 4px #202E39;
+    font-weight: bold;
+}
+
+
 /* Estilos para las secciones con background image */
 .background-section-1 {
+    font-family: 'Montserrat', sans-serif;
     height: 91vh; /* Altura de la sección */
     background: url('Media/Hero_op2.jpeg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: aqua;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 5%;
-    padding:  7em;
+    padding: 0 10%;
+    color: whitesmoke;
+    text-shadow: 0px 0px 8px #202E39;
 }
 
 .background-section-1 h1 {
-    font-size: 4.3em;
-    color: #202E39;
-    text-align: right;
-    text-shadow: 0px 0px 4px #202E39;
-    margin: 10px;
-    font-weight: 500;
+    font-size: 4em;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
 }   
 .background-section-1 p {
-    font-size: 2.6em;
-    color: whitesmoke;
-    text-align: right;
-    text-shadow: 0px 0px 4px #202E39;
-    margin: 50px 10px;
+    font-size: 2.5em;
+    line-height: 6;
+    text-align: left;
+    margin-bottom: 30px;
+    max-width: 600px;
 }
 
 .background-section-1 a {
+    display: inline-block;
     border: 1px solid rgba(153,153,151,0.516);
     background-color: #FCBE0B; 
     width: 170px;
@@ -87,6 +147,7 @@ section {
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease; 
+    text-shadow: none;
 }
 
 .background-section-1 a:hover {
@@ -97,6 +158,7 @@ section {
 }
 
 .background-section-2 {
+    font-family: 'Montserrat', sans-serif;
     height: 360vh;
     background-size: cover;
     background-position: center;
@@ -182,6 +244,7 @@ section {
     /* margin: 5px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    padding: 20px;
 }
 
 .how-container ul {
@@ -199,9 +262,9 @@ section {
 }
 
 .how-container ul li::before {
-    content: "✔️"; 
-    color: #4CAF50; 
-    font-size: 1em; 
+    content: '✓'; 
+    color: #902117; 
+    font-size: 1.1em; 
     margin-right: 10px; /
 }
 
@@ -248,6 +311,7 @@ section {
 }
 
 .video-container {
+    border-top: #FCBE0B 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,6 +322,7 @@ section {
     grid-column: 1 / 8;
     grid-row: 3/ 3;
     overflow: hidden;
+    border-radius: 10px;
     /* margin: 5px; */
 }
 
@@ -268,7 +333,7 @@ section {
     /*align-items: center;*/
     height: 100%;
     width: 100%;
-    background-color: #202E39;
+    background-color: #902117;
     color: white;
     grid-column:  8 / 13;
     grid-row: 3 / 3;
@@ -276,6 +341,7 @@ section {
     /* margin: 5px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border-top: #FCBE0B 2px solid;
 }
 
 .testimonial-container p {
@@ -289,6 +355,7 @@ section {
 
 .testimonial-container a {
     text-decoration: none;
+    text-transform: none;
     text-align: left;
     font-size: 1.5em;
     color: inherit;
@@ -296,7 +363,7 @@ section {
 }
 
 .testimonial-container a:hover {
-    color: #902117;
+    color: #FCBE0B;
     transform: scale(1.05);
 }
 
@@ -315,6 +382,7 @@ section {
     grid-row: 4 / 4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border-top: #FCBE0B 2px solid;
 }
 
 .community-container {
@@ -332,6 +400,7 @@ section {
     grid-row: 4 / 4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border-top: #FCBE0B 2px solid;
 }
 
 .community-container p {
@@ -353,7 +422,7 @@ section {
     text-decoration: none; 
     text-align: center; 
     cursor: pointer; 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .community-container a:hover {
@@ -370,13 +439,14 @@ section {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: #202E39;
+    background-color: #902117;
     color: white;
     grid-column: 1 / 5;
     grid-row: 5 / 5;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border-top: #FCBE0B 2px solid;
     /* margin: 5px; */
 }
 
@@ -416,13 +486,14 @@ section {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: #202E39;
+    background-color: #902117;
     color: white;
     grid-column:  9 / 13;
     grid-row: 5 / 5;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border-top: #FCBE0B 2px solid;
     /* margin: 5px; */
 }
 
@@ -456,6 +527,7 @@ section {
 }
 
 .image-container-2{
+    border-top: #FCBE0B 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -646,5 +718,126 @@ section {
     background-image: url('bg2.jpeg'); 
 } */
 
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
 
+    h1, h2 {
+        font-size: 1.6em;
+        text-align: center;
+    }
 
+    section {
+        padding: 10px;
+    }
+
+    .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {
+        grid-column: 1 / -1;
+        margin-bottom: 15px;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .who-container p, .how-container p, .testimonial-container p, .event-container p, .blog-container p, .community-container p {
+        font-size: 0.9em;
+        text-align: justify;
+        margin: 10px 0;
+    }
+
+    a.button, button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .contact-footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .map {
+        width: 100%;
+        height: 200px;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+        margin: 0 5px;
+    }
+
+    .back-to-top {
+        bottom: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 11px;
+    }
+
+    h1, h2 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .who-container p, .how-container p, .testimonial-container p, .event-container p, .blog-container p, .community-container p {
+        font-size: 0.8em;
+        text-align: justify;
+        margin: 8px 0;
+    }
+
+    a.button, button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .contact-footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .map {
+        width: 100%;
+        height: 180px;
+    }
+
+    .social-icons a {
+        font-size: 1.3em;
+        margin: 0 5px;
+    }
+
+    .back-to-top {
+        bottom: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9em;
+    }
+}

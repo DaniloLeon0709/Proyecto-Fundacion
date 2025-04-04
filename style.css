@@ -143,14 +143,14 @@ a {
 .background-section-1 a {
     display: inline-block;
     border: 1px solid rgba(153,153,151,0.516);
-    background-color: #FCBE0B; 
+    background-color: #223239; 
     width: 170px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #202E39; 
+    color: #FCBE0B; 
     font-size: 1em;
     margin-left: 10px;
     font-weight: bold;
@@ -893,7 +893,7 @@ a {
 
     .background-section-1 p{
         line-height: 6;
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {

@@ -727,7 +727,7 @@ a {
     background-image: url('bg2.jpeg'); 
 } */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     body {
         font-size: 13px;
     }
@@ -893,7 +893,7 @@ a {
 
     .background-section-1 p{
         line-height: 6;
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {

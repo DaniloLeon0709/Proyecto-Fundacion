@@ -60,37 +60,37 @@ a {
 
 .site-header .navbar {
     display: flex;
-    justify-content: space-between; /* Espacia los elementos del navbar */
-    flex: 1; /* Ocupa todo el espacio disponible */
-    margin-left: 20px; /* Espaciado entre el logo y el navbar */
+    justify-content: space-between; 
+    flex: 1; 
+    margin-left: 20px;
 }
 
 .site-header .navbar ul {
     display: flex;
-    justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+    justify-content: space-evenly; 
     align-items: center;
-    list-style: none; /* Elimina los puntos de la lista */
-    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    list-style: none; 
+    width: 100%; 
     padding: 0;
     margin: 0;
 }
 
 .site-header .navbar ul li {
-    flex: 1; /* Cada elemento ocupa el mismo espacio */
-    text-align: center; /* Centra el texto dentro de cada elemento */
+    flex: 1;
+    text-align: center;
 }
 
 .site-header .navbar ul li a {
-    text-decoration: none; /* Elimina la línea del texto */
-    color: #FCBE0B; /* Color amarillo */
-    font-size: 1.2em; /* Tamaño del texto */
+    text-decoration: none;
+    color: #FCBE0B; 
+    font-size: 1.2em; 
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .site-header .navbar ul li a:hover {
-    color: #FFFFFF; /* Cambia el color al pasar el cursor */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    color: #FFFFFF;
+    transform: scale(1.1);
 }
 .site-header span {
     font-family: 'Montserrat', sans-serif;
@@ -100,11 +100,20 @@ a {
     font-weight: bold;
 }
 
+.menu-hamburguesa {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FCBE0B;
+}
 
-/* Estilos para las secciones con background image */
+.navbar {
+    display: flex;
+}
+
 .background-section-1 {
     font-family: 'Montserrat', sans-serif;
-    height: 91vh; /* Altura de la sección */
+    height: 91vh;
     background: url('Media/Hero_op2.jpeg') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
@@ -724,7 +733,7 @@ a {
     }
 
     h1, h2 {
-        font-size: 1.6em;
+        font-size: 2em;
         text-align: center;
     }
 
@@ -732,26 +741,68 @@ a {
         padding: 10px;
     }
 
-    .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {
-        grid-column: 1 / -1;
-        margin-bottom: 15px;
-        padding: 10px;
+    .site-header {
         width: 100%;
+    }
+
+    .background-section-1 {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .background-section-1 p{
+        line-height: 4;
+    }
+
+    .background-section-1 a {
+        width: 178px;
+    }
+
+    .background-section-2 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+
+    .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container, .image-container, .image-container-2, .contact-container, .video-container {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 15px;
+        padding: 40px;
         box-sizing: border-box;
     }
 
+    .video-container {
+        height: 100%; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .image-container, .image-container-2, .contact-container {
+        height: 100vh; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .who-container p, .how-container p, .testimonial-container p, .event-container p, .blog-container p, .community-container p {
-        font-size: 0.9em;
-        text-align: justify;
-        margin: 10px 0;
+        text-align: center;
+        margin: 20px 0 50px 0;
+        font-size: 1.5em;
     }
 
     a.button, button {
-        font-size: 0.9em;
         padding: 8px 12px;
     }
 
     .contact-footer {
+        margin: 0;
+        width: 100%;
         flex-direction: column;
         padding: 15px;
     }
@@ -762,13 +813,16 @@ a {
     }
 
     .map {
+        margin-left: 56px;
+        height: 350px;
+    }
+
+    .footer {
         width: 100%;
-        height: 200px;
     }
 
     .social-icons a {
-        font-size: 1.5em;
-        margin: 0 5px;
+        font-size: 2.4em;
     }
 
     .back-to-top {
@@ -778,15 +832,18 @@ a {
         height: 35px;
         font-size: 1em;
     }
+
+
 }
 
 @media (max-width: 480px) {
     body {
         font-size: 11px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     h1, h2 {
-        font-size: 1.4em;
+        font-size: 2em;
         text-align: center;
     }
 
@@ -794,23 +851,84 @@ a {
         padding: 8px;
     }
 
+    .menu-hamburguesa {
+        display: block; 
+    }
+
+    .site-header .navbar {
+        display: none; 
+        flex-direction: row;
+        position: absolute;
+        top: 80px; 
+        left: -20px;
+        width: 100%;
+        background-color: #202E39;
+        z-index: 10;
+        border-radius: 0 0 10px 10px;
+        box-shadow:  0 8px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .site-header .navbar ul {
+        flex-direction: column;
+    }
+
+    .site-header .navbar li {
+        flex: none;
+        width: 100%;
+        padding: 10px 0;
+        border-top: #fcc00b4e 1px solid;
+    }
+
+    .site-header .navbar ul li {
+        text-align: center;
+        padding: 10px 0;
+        
+    }
+
+    .site-header .navbar ul li a {
+        color: #FCBE0B;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+
+    .background-section-1 p{
+        line-height: 6;
+        font-size: 2.2em;
+    }
+
     .who-container, .how-container, .testimonial-container, .event-container, .blog-container, .community-container {
         grid-column: 1 / -1;
         margin-bottom: 10px;
-        padding: 8px;
+        padding: 40px;
         width: 100%;
+        height: 50vh;
         box-sizing: border-box;
     }
 
     .who-container p, .how-container p, .testimonial-container p, .event-container p, .blog-container p, .community-container p {
-        font-size: 0.8em;
+        font-size: 1.2em;
         text-align: justify;
-        margin: 8px 0;
+        margin: 20px 0 50px 0;
+    }
+
+    .how-container ul li {
+        font-size: 1.2em;
     }
 
     a.button, button {
-        font-size: 0.8em;
+        font-size: 1em;
         padding: 6px 10px;
+    }
+
+    .testimonial-container a{
+        font-size: 1.2em;
+    }
+
+    .image-container, .image-container-2, .contact-container {
+        height: 50vh; 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .contact-footer {
@@ -824,12 +942,13 @@ a {
     }
 
     .map {
-        width: 100%;
-        height: 180px;
+        margin-left: 0;
+        width: auto;
+        height: 250px;
     }
 
     .social-icons a {
-        font-size: 1.3em;
+        font-size: 3em;
         margin: 0 5px;
     }
 
@@ -841,3 +960,4 @@ a {
         font-size: 0.9em;
     }
 }
+

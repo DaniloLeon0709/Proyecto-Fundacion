@@ -17,12 +17,14 @@
         <!-- Espacio para imagen de logo -->
         <img src="Media/LOGO 444-03.png" alt="Logo" class="logo">
         <span class="logo-text">Fundación 444</span>
-        <nav class="navbar">
+        <div class="menu-hamburguesa" id="menu-hamburguesa">&#9776;</div> <!-- Menú hamburguesa -->
+        <nav class="navbar" id="navbar">
             <ul class="nav-list">
                 <li><a href="#who-container">¿Quiénes somos?</a></li>
                 <li><a href="#community-container">Explora y aprende</a></li>
-                <li><a href="#contact-footer">Contactenos</a></li>
+                <li><a href="#contact-footer">Contáctenos</a></li>
             </ul>
+        </nav>
     </header>
 
     <!-- Secciones con imagen de background -->
@@ -168,7 +170,16 @@
 
             window.addEventListener('scroll', checkScrollForAllVideos);
             window.addEventListener('resize', checkScrollForAllVideos);
-            checkScrollForAllVideos(); // Verificar inicialmente si los videos están en la vista
+            checkScrollForAllVideos();
+        });
+
+        document.getElementById('menu-hamburguesa').addEventListener('click', function () {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
         });
     </script>
 </body>
